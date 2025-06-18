@@ -48,17 +48,17 @@ The site is deployed automatically via CI/CD from a GitHub repo to an S3 bucket
  * Learned how to generate and scope IAM user access keys for GitHub CI/CD.
  
 📦 **CloudFront Struggles**
-* Spent several days configuring CloudFront with Origin Access Control (OAC) to securely serve content from S3.
+* Spent several days configuring CloudFront with Origin Access Control (IAC) to securely serve content from S3.
 * Faced multiple AccessDenied errors and confusing behavior where changes to the site didn’t reflect after updates.
 * Discovered that CloudFront caches content, so updates won’t appear unless a cache invalidation is triggered.
-* Initially added a CloudFront invalidation step to the deployment script after syncing files to S3 — but still encountered errors.
+* Initially added a CloudFront invalidation step to the deployment script after syncing files to S3 but still encountered errors.
 * Through isolation-based troubleshooting, I discovered:
    * GitHub Actions was syncing files with a folder structure (e.g. /website/index.html)
    * Meanwhile, the S3 bucket’s default root object was set to index.html, not /website/index.html
    *  As a result, CloudFront couldn't find the file — though the actual error was masked due to CloudFront's error masking behavior
    *  After adjusting both the sync path and the default root object, CloudFront successfully retrieved and served the updated content.
 * This process taught me how to:
-   * Troubleshoot CloudFront–S3 integration
+   * Troubleshoot CloudFront S3 integration
    * Interpret and refine S3 bucket policies
    * Apply precise IAM conditions
    
