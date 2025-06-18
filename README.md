@@ -55,7 +55,7 @@ The site is deployed automatically via CI/CD from a GitHub repo to an S3 bucket
 * Through isolation-based troubleshooting, I discovered:
    * GitHub Actions was syncing files with a folder structure (e.g. /website/index.html)
    * Meanwhile, the S3 bucket’s default root object was set to index.html, not /website/index.html
-   *  As a result, CloudFront couldn't find the file — though the actual error was masked due to CloudFront's error masking behavior
+   *  As a result, CloudFront couldn't find the fill though the actual error was masked due to CloudFront's error masking behavior
    *  After adjusting both the sync path and the default root object, CloudFront successfully retrieved and served the updated content.
 * This process taught me how to:
    * Troubleshoot CloudFront S3 integration
