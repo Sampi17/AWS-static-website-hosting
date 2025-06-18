@@ -32,6 +32,7 @@ The site is deployed automatically via CI/CD from a GitHub repo to an S3 bucket
 10. Push to the `master` branch to trigger deployment
   
 ## 📁 Repo Structure
+
 1. website/ index.html,style.css
 2.github/workflows/deploy.yml
 3.README.md
