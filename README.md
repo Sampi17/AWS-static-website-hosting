@@ -1,2 +1,6 @@
 # AWS-static-website-hosting
-Host a static portfolio or blog site using S3, serve it via CloudFront, manage access with IAM, and monitor it with CloudWatch Logs &amp; Metrics.
+## 📌 Project Overview
+
+This project is a personal portfolio website hosted on AWS S3 using static website hosting. It demonstrates my understanding of AWS core services like S3, IAM, GitHub Actions, and infrastructure security principles.
+
+The site is deployed automatically via CI/CD from a GitHub repo to an S3 bucket.SzSas
