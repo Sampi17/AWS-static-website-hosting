@@ -21,8 +21,9 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Sync files to S3
-        run: |
-          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete --exclude ".git/*" --exclude ".github/*"
+        run: | 
+          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} \
+          --delete --exclude ".git/*" --exclude ".github/*"
 
       - name: Create CloudFront invalidation
         run: |
