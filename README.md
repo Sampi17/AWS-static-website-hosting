@@ -4,7 +4,7 @@ This project is a personal portfolio website hosted on AWS S3 using static websi
 
 The site is deployed automatically via CI/CD from a GitHub repo to an S3 bucket
 # Architecture diagram
-![My Screenshot]()
+![My Screenshot](project screenshots/Static_website_arcitecture_diagram.png)
 # ⚙️ Technologies Used
 
 - **Amazon S3** – Static website hosting
